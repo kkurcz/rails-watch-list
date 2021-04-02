@@ -3,18 +3,24 @@
 
 }
 
+#lists {
+  padding-top: 70px;
+}
+
 .scrollableRow {
   overflow-x: scroll;
   // margin-left: -24px;
-  margin-right: -24px;
+  // margin-right: -24px;
   // padding-left: 18px;
-  padding-right: 18px;
+  // padding-right: 18px;
 }
 
 .list-movie-card {
   margin-top: 10px;
+
   img {
     height: 125px;
+    border-radius: 5px;
   }
 }
 
