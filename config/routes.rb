@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "lists/new", to: "lists#new", as: 'new_list'
   # A user can see the details of a given list and its name
   get "lists/:id", to: "lists#show", as: 'list'
+  delete "lists/:id", to: "lists#destroy"
 
   get "lists/:list_id/bookmarks/new", to: "bookmarks#new", as: 'new_list_bookmark'
   post "lists/:list_id/bookmarks", to: "bookmarks#create", as: 'list_bookmarks'

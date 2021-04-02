@@ -2,19 +2,16 @@
 <%= render "shared/banner" %>
 
 <!-- app/views/articles/index.html.erb -->
-<%= cl_image_tag("ueuyynqohoueavm5mln6",
+<%#= cl_image_tag("ueuyynqohoueavm5mln6",
       width: 400, height: 300, crop: :fill) %>
 
-<!-- for face detection -->
-<%= cl_image_tag("ueuyynqohoueavm5mln6",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>
 
 <div class="container" id="lists">
-  <h1>Your lists</h1>
+  <h1 class="header">Your lists</h1>
   <div class="row">
     <% @lists.each do |list| %>
       <div class="col-6">
-        <div class="list-card-pic">
+        <div class="card-category2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>')">
           <h1>
             <%= link_to list.name, list_path(list) %>
           </h1>
@@ -23,7 +20,7 @@
         <div class="container">
           <div class="row flex-nowrap scrollableRow">
             <% list.bookmarks.each do |bookmark| %>
-              <div class="pl-0 col-2 ">
+              <div class="pl-0 mb-4 col-3">
                 <div class="list-movie-card">
                   <img src="<%= bookmark.movie.poster_url %>" alt="">
                 </div>
@@ -36,9 +33,9 @@
   </div>
 </div>
 
-<!--   <%= link_to "Create a new list", new_list_path %>
+<!--   <%#= link_to "Create a new list", new_list_path %>
  -->
-<div class="container">
+<div class="container" id="new-list">
     <h3>Create a new list</h3>
   <%= simple_form_for(@list) do |f| %>
     <%= f.input :name %>

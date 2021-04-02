@@ -3,8 +3,13 @@
 
 }
 
+.header {
+  margin-bottom: 65px;
+}
+
 #lists {
   padding-top: 70px;
+  text-align: center;
 }
 
 .scrollableRow {
@@ -47,3 +52,72 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.card-category2 {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  opacity: 0.9;
+  a {
+    color: white;
+    text-shadow: 1px 1px 20px black;
+    text-decoration: none;
+  }
+  transition: 0.7 ease;
+}
+
+.card-category2:hover{
+  opacity: 1;
+}
+
+#new-list {
+  padding: 40px;
+  width: 600px;
+  margin-top: 150px;
+  margin-bottom: 250px;
+  box-shadow: 3px 3px 20px grey;
+}
+
+#new-movie {
+  padding: 40px;
+  width: 600px;
+  margin-top: 150px;
+  margin-bottom: 250px;
+  box-shadow: 3px 3px 20px grey;
+}
+
+.movie-card {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+  img {
+    height: 200px;
+    width: 100%;
+  }
+}
+
+.movie-show-img {
+  height: 650px;
+  margin-top: 100px;
+  border-radius: 5px;
+}
+
+
+.movie-show-content{
+  margin-top: 100px;
+}
+
+.movie-header {
+  text-align: center;
+  margin-top: 100px;
+}
+
