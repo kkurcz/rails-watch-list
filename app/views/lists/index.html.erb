@@ -1,6 +1,14 @@
 
 <%= render "shared/banner" %>
 
+<!-- app/views/articles/index.html.erb -->
+<%= cl_image_tag("ueuyynqohoueavm5mln6",
+      width: 400, height: 300, crop: :fill) %>
+
+<!-- for face detection -->
+<%= cl_image_tag("ueuyynqohoueavm5mln6",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
 <div class="container" id="lists">
   <h1>Your lists</h1>
   <div class="row">
@@ -29,12 +37,12 @@
 </div>
 
 <!--   <%= link_to "Create a new list", new_list_path %>
- --></div>
-
+ -->
 <div class="container">
-  <h3>Create a new list</h3>
+    <h3>Create a new list</h3>
   <%= simple_form_for(@list) do |f| %>
     <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
     <%= f.button :submit %>
     <%=  %>
   <% end %>
