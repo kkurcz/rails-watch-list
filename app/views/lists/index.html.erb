@@ -1,0 +1,40 @@
+
+<%= render "shared/banner" %>
+
+<div class="container">
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-6">
+        <div class="list-card-pic">
+          <h1>
+            <%= link_to list.name, list_path(list) %>
+          </h1>
+        </div>
+
+        <div class="container">
+          <div class="row flex-nowrap scrollableRow">
+            <% list.bookmarks.each do |bookmark| %>
+              <div class="pl-0 col-2 ">
+                <div class="list-movie-card">
+                  <img src="<%= bookmark.movie.poster_url %>" alt="">
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!--   <%= link_to "Create a new list", new_list_path %>
+ --></div>
+
+<div class="container">
+  <h3>Create a new list</h3>
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit %>
+    <%=  %>
+  <% end %>
+</div>

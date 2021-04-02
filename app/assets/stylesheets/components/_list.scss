@@ -1,0 +1,28 @@
+.list-card-pic {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("stars.jpg");
+
+}
+
+.scrollableRow {
+  overflow-x: scroll;
+  // margin-left: -24px;
+  margin-right: -24px;
+  // padding-left: 18px;
+  padding-right: 18px;
+}
+
+.list-movie-card {
+  margin-top: 10px;
+  img {
+    height: 125px;
+  }
+}
+
+.list-card-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
